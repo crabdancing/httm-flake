@@ -3,7 +3,10 @@
     flake-utils.url = "github:numtide/flake-utils";
     naersk.url = "github:nix-community/naersk";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    httm.url = "github:kimono-koans/httm";
+    httm = {
+      url = "github:kimono-koans/httm";
+      flake = false;
+    };
   };
 
   outputs = { self, flake-utils, naersk, nixpkgs, httm }:
